@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="loader"></div>
+  <main class="app">
+    <header class="app-header">
+      <div class="app-name">Smash It <span>Weather App</span></div>
+      <div class="weather-search">
+        <input type="search" name="search" class="search-weather" placeholder="Search City">
+        <button class="search-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- main weather-details -->
+    <section class="weather">
+      <img src="" alt="" class="weather-icon">
+      <div class="weather-condition">
+        <p class="weather-date">sunday june 2020</p>
+        <p><span class="weather-city"></span> , <span class="weather-country"></span></p>
+        <p> <span class="weather-degree"></span> <span><span class="celsius">&#176;c</span></span></p>
+        <p class="temperature-detail"></p>
+      </div>
+      <div class="weather-sub-details">
+        <div>
+          <span class="feels-like">
+            <p></p>
+          </span>
+          <span class="humidity">
+            <p></p>
+          </span>
+          <span class="speed">
+            <p></p>
+          </span>
+        </div>
+      </div>
+      <br>
+    </section>
+
+    <!-- outdoor-guide and tips-->
+    <section class="outdoor-guide">
+      <div class="container">
+       
+        <h3>Planning An Outdoor Event?</h3>
+        <div class="outdoor-events">
+         
+        </div>
+        <p><small><mark>Nota Bene: Appropriate Seasonal Apparel Is Key to Enjoying The Outdoors</mark></small></p>
+      </div>
+    </section>
+
+    <!-- daily weather report -->
+    <section class="daily-weather">
+      <h3>7 Days Weather Forecast</h3>
+      <div class="days">
+        <div class="day-forecast">
+          <p class="sun">Sun</p>
+          <img src="" class="sn-icon" alt="icon">
+          <p class="sun-t"></p>
+        </div>
+        <div class="day-forecast">
+          <p class="mon">Mon</p>
+          <img src="" class="m-icon" alt="icon">
+          <p class="mon-t"></p>
+        </div>
+        <div class="day-forecast">
+          <p class="tue">Tue</p>
+          <img src="" class="t-icon" alt="icon">
+          <p class="tue-t"></p>
+        </div>
+        <div class="day-forecast">
+          <p class="wed">Wed</p>
+          <img src="" class="w-icon" alt="icon">
+          <p class="wed-t"></p>
+        </div>
+        <div class="day-forecast">
+          <p class="thu">Thu</p>
+          <img src="" class="th-icon" alt="icon">
+          <p class="thu-t"></p>
+        </div>
+        <div class="day-forecast">
+          <p class="fri">Fri</p>
+          <img src="" class="f-icon" alt="icon">
+          <p class="fri-t"></p>
+        </div>
+        <div class="day-forecast last-day">
+          <p class="sat">sat</p>
+          <img src="" class="s-icon" alt="icon">
+          <p class="sat-t"></p>
+        </div>
+      </div>
+    </section>
+    <div class="credit">
+      <p>GADS2020 | ALC | PluralSight</p>
+    </div>
+    </main>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+   
+
+    <!-- scripts -->
+    <script src="service-worker.js"></script>
+    <script src="weather.js"></script>
+    <script src="ui.js"></script>
+    <script src="ui-daily.js"></script>
+    <script src="forecast.js"></script>
+    <script src="local-storage.js"></script>
+    <script src="app.js"></script>
+
+ 
+</body>
+
+</html> 

@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: rgba(95, 93, 211, 0.4);
+
+}
+
+ul li {
+  list-style: none;
+}
+
+header {
+  padding: .4rem;
+  text-align: center;
+
+}
+
+.loader {
+  position: absolute;
+  z-index: 4;
+  top: 40%;
+  left: 40%;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  border-bottom: 16px solid #0ce053;
+  border-left: 16px solid #e00c41;
+  border-right: 16px solid #e00c41;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+html body .app {
+  height: 100vh;
+  padding: .3rem auto;
+  background: url('../src/bg.png');
+  background-position: center;
+  background-size: cover;
+
+}
+
+.app-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.app-name span {
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  font-size: 1rem;
+  position: relative;
+  top: -.2rem;
+}
+
+.weather-search {
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: -.1rem;
+
+}
+
+input {
+  background: transparent;
+  font-weight: 400;
+  color: white;
+  font-size: 1.2rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search-weather {
+  /* width: 12rem; */
+  height: 1.5rem;
+  border: none;
+  border-bottom: 3px solid;
+}
+
+
+.weather {
+  position: relative;
+  background-color: rgba(7, 6, 6, 0.3);
+  ;
+  border: 3px solid rgba(233, 226, 226, 0.64);
+  border-radius: .75rem;
+  -webkit-box-shadow: 2px 3px;
+  box-shadow: 3px 5px;
+  padding: 0 1rem;
+  margin: .5rem 1.2rem;
+  /* height: 11rem; */
+}
+
+.weather-condition {
+  position: relative;
+  padding: .5rem .2rem;
+  visibility: hidden;
+}
+
+.weather-date {
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.weather-city,
+.weather-country {
+  font-weight: 390;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.weather-degree {
+  font-weight: 700;
+  font-size: 3rem;
+
+}
+
+
+span .celsius {
+  position: absolute;
+  margin-top: -.1rem;
+  margin-left: -.1rem;
+  font-size: 2rem;
+}
+
+.weather .temperature-detail {
+  margin-top: -.3rem;
+  font-size: 1rem;
+}
+
+.weather-icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -1rem;
+  right: -.5rem;
+  height: 12rem;
+  visibility: hidden;
+}
+
+.weather-sub-details {
+  position: relative;
+  text-align: center;
+  visibility: hidden;
+}
+
+
+.weather-sub-details div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: .8rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.weather-sub-details div span {
+  padding: .2rem;
+}
+
+.outdoor-guide {
+  padding: 0 1rem;
+  margin: 1rem auto;
+  text-align: center;
+  background: rgba(11, 11, 12, 0.34);
+}
+
+.outdoor-events {
+  padding: .5rem;
+  visibility: hidden;
+}
+
+.outdoor-guide h3 {
+  text-decoration: underline;
+}
+
+.outdoor-events li {
+  padding: .5rem 0;
+  font-weight: 500;
+}
+
+.daily-weather {
+  margin-top: 2rem;
+  background: rgba(27, 26, 26, 0.5);
+  ;
+  color: white;
+  height: 9rem;
+}
+
+.daily-weather h3 {
+  text-align: center;
+}
+
+.daily-weather .days {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: .1rem;
+  visibility: hidden;
+}
+
+
+.daily-weather .days .day-forecast {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 14%;
+
+  /* height: 9rem; */
+  /* border: 1px solid red; */
+  margin: 1px;
+}
+
+.day-forecast img {
+  text-align: center;
+  height: 3rem;
+}
+
+.day-forecast p:nth-child(1) {
+  font-weight: bold;
+}
+
+.day-forecast p:last-child {
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.daily-weather h3 {
+  text-decoration: underline;
+}
+
+
+.credit {
+  margin-top: .3rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+
+@media only screen and (min-width: 749px) {
+  body {
+    color: white;
+    position: absolute;
+    width: 25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+}
+
+
+@media only screen and (max-width: 568px) {
+  body {
+    color: white;
+
+  }
+
+
+  html body .app {
+    height: 130vh;
+    padding: .3rem 0;
+    background: url('../src/bg.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .weather-icon {
+    top: .5rem;
+    height: 75%;
+  }
+
+}
